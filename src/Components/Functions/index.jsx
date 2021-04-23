@@ -1,11 +1,15 @@
-const cleanString = /[\ \n]/g;
+const matchSpace = /\W/g;
+const matchWords = /\w+/g;
 
 export function charactersWithSpace(string) {
   return string.length;
 }
+
 export function characters(string) {
-  return string.replace(cleanString, "").length;
+  return string.replace(matchSpace, "").length;
 }
+
 export function words(string) {
-  return string.split(" ").length;
+  let result = [...string.matchAll(matchWords)];
+  return result.length;
 }

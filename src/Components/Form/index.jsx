@@ -9,7 +9,7 @@ const StyledForm = Styled(Form)`
 export const Forms = ({ func }) => {
   return (
     <StyledForm>
-      <TextArea id="text" name="text" onChange={(e) => func(e.target.value)} />
+      <TextArea onChange={(e) => func(e.target.value)} />
     </StyledForm>
   );
 };
